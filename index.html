@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CodeType Offline</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">⌨️ <span>CodeType</span><small> OFFLINE</small></div>
+  <div class="controls">
+    <select id="language">
+      <option value="all">All Languages</option>
+      <option value="python">Python</option>
+      <option value="javascript">JavaScript</option>
+      <option value="java">Java</option>
+      <option value="cpp">C++</option>
+      <option value="sql">SQL</option>
+    </select>
+    <select id="duration">
+      <option value="60">1 min</option>
+      <option value="120">2 min</option>
+      <option value="300" selected>5 min</option>
+      <option value="600">10 min</option>
+    </select>
+    <button id="themeBtn" title="Toggle theme">☀️</button>
+    <button id="resetBtn">Reset</button>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div>
+      <p class="eyebrow">100% LOCAL • NO INTERNET • NO LOGIN</p>
+      <h1>Master <span>Code Typing</span></h1>
+      <p>Practice real programming snippets and improve your speed, accuracy and muscle memory.</p>
+    </div>
+    <button id="newChallenge" class="primary">⚡ New Challenge</button>
+  </section>
+
+  <section class="stats">
+    <div><span>WPM</span><strong id="wpm">0</strong></div>
+    <div><span>Accuracy</span><strong id="accuracy">100%</strong></div>
+    <div><span>Errors</span><strong id="errors">0</strong></div>
+    <div><span>Time</span><strong id="time">05:00</strong></div>
+    <div><span>Streak</span><strong id="streak">0</strong></div>
+    <div><span>Best WPM</span><strong id="best">0</strong></div>
+  </section>
+
+  <section class="workspace">
+    <div class="panel challenge">
+      <div class="panel-head">
+        <div><b id="challengeTitle">Challenge</b><span id="challengeLang">Python</span></div>
+        <span id="progress">0%</span>
+      </div>
+      <div id="codeDisplay" class="code-display"></div>
+    </div>
+
+    <div class="panel editor">
+      <div class="panel-head">
+        <b>Your Code</b><span>Type below</span>
+      </div>
+      <textarea id="typingArea" spellcheck="false" autocomplete="off" autocorrect="off" autocapitalize="off" placeholder="Start typing the code here..."></textarea>
+      <div class="hint">Tip: Use <kbd>Tab</kbd> for indentation • <kbd>Ctrl</kbd> + <kbd>R</kbd> is disabled during practice</div>
+    </div>
+  </section>
+
+  <section class="keyboard-panel panel">
+    <div class="panel-head"><b>Keyboard</b><span id="keyHint">Live key feedback</span></div>
+    <div id="keyboard" class="keyboard"></div>
+  </section>
+
+  <section class="bottom-grid">
+    <div class="panel">
+      <div class="panel-head"><b>🏆 Personal Best</b><span>Saved locally</span></div>
+      <div class="pb-grid">
+        <div><span>Best WPM</span><strong id="pbWpm">0</strong></div>
+        <div><span>Best Accuracy</span><strong id="pbAcc">0%</strong></div>
+        <div><span>Challenges</span><strong id="pbChallenges">0</strong></div>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="panel-head"><b>📌 How to Practice</b></div>
+      <ol class="tips">
+        <li>Choose a language and timer.</li>
+        <li>Click inside the editor and type exactly what you see.</li>
+        <li>Do not use copy/paste—the app blocks it during practice.</li>
+        <li>Focus on accuracy first, then build speed.</li>
+      </ol>
+    </div>
+  </section>
+</main>
+<footer>CodeType Offline • Your results stay on this device using localStorage.</footer>
+<script src="data.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
